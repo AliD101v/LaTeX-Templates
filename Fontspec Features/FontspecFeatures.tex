@@ -1,0 +1,85 @@
+\documentclass[]{article}
+
+\usepackage{fontspec}
+%[
+%Renderer=Graphite,
+%RawFeature={onum}]
+\setmainfont{Libertinus Serif}[
+Ligatures={Common,TeX},
+Numbers={OldStyle, Proportional}
+]
+\setsansfont{Libertinus Sans}
+\setmonofont{Libertinus Mono}
+
+% Vertical width: lining or oldstyle
+% Horizontal width: proportional or tabular
+
+% \setmonofont{Inconsolata}
+%\setmainfont[
+%Renderer=Graphite,
+%RawFeature={pnum=1 onum=1}]{Libertinus Serif}
+%{\feature[+][latn]Charis SIL: Difficult}
+
+%% Use this for tables: \addfontfeatures{Numbers={Lining, Tabular, Monospaced}}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+%\fontspec[Ligatures=Common]{Libertinus Serif}
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{}
+
+%\addfontfeatures{Style=Alternate,Letters = UppercaseSmallCaps}
+This thin Quiffle Ty 0123456789 % normal text (equivalent to \textrm{})
+
+\textsf{This thin Quiffle Ty  0123456789} % sans serif text
+
+\texttt{This thin Quiffle Ty  0123456789} % monospaced text (aka typewriter or teletype. https://en.wikibooks.org/wiki/LaTeX/Fonts#Font_styles)
+
+\textit{This thin Quiffle Ty 0123456789 \& What AMAN}
+
+\addfontfeatures{ItalicFeatures={Style=Swash}}
+
+\textit{This thin Quiffle Ty 0123456789 \& What AMAN}
+
+\addfontfeatures{Style=Alternate,Letters = UppercaseSmallCaps}
+Quiffle ft This ct st Ty 0123456789 \& What AMAN
+
+\textit{Quiffle ft This ct st Ty 0123456789 \& What AMAN}
+
+\addfontfeatures{Numbers=ResetAll}
+
+{\addfontfeatures{Numbers=OldStyle}
+0123456789}
+
+
+{\addfontfeatures{Numbers=Monospaced}
+Monospaced numbers: 0123456789}
+
+\texttt{This is typewriter w/ Monospaced after Monospaced 0123456789}
+
+\addfontfeatures{Numbers=ResetAll}
+0123456789
+
+\texttt{This is typewriter w/ Monospaced after ResetAll 0123456789}
+
+%	\addfontfeatures{RawFeature={frac}}
+\addfontfeatures{Numbers={Lining, Tabular}}
+%{
+\addfontfeatures{StylisticSet=5}
+	\begin{tabular}{l r}
+		Widgets: & 25 \\
+		Gadgets: & 6 \\ 
+		Whatsits & \addfontfeatures{Fractions=On}1/256 \\ 
+		Whatsits & 1/256 \\
+	\end{tabular}
+%} % Return to previous figure style
+\end{document}
