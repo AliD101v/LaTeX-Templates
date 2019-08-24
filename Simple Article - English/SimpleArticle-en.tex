@@ -1,0 +1,150 @@
+\documentclass[letterpaper]{article}
+
+%
+% ─────────────────────────────────────────────────────────────────────────────
+%   :::::: L O A D   P A C K A G E S : :  :   :    :     :        :          :
+% ────────────────────────────────────────────────────────────────────────────
+%
+
+%
+% ─── LANGUAGE AND FONT SETTINGS ─────────────────────────────────────────────────
+%
+% supersedes babel, http://www.ctan.org/tex-archive/macros/xetex/latex/polyglossia
+\usepackage{polyglossia} 
+\setdefaultlanguage[]{english}
+
+% Use any other font of your choice here.
+% For the Libertinus family, you can download and install them from here:
+% https://github.com/alif-type/libertinus/releases
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}[
+Ligatures={Common,TeX},
+Numbers={OldStyle, Proportional}
+]
+\setsansfont{Libertinus Sans}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Libertinus Math}
+
+%% some frequently-used font commands
+\newcommand{\fslining}[1]{{\addfontfeatures{Numbers=Lining}{#1}}}
+\newcommand{\fssup}[1]{{\addfontfeatures{VerticalPosition=Superior}{#1}}}
+\newcommand{\fssc}[1]{{\addfontfeatures{Letters=SmallCaps}{#1}}}
+
+%
+% ─── SETUP PAGE SIZE AND LAYOUT ─────────────────────────────────────────────────
+%
+% Other choices (or a mix):
+%\usepackage[twoside,paperheight=240mm,paperwidth=170mm,centering,height=186mm,width=120mm,outermargin=45mm]{geometry}
+%\usepackage[xetex,twoside,paperheight=240mm,paperwidth=170mm,centering]{geometry}
+\usepackage[letterpaper,xetex,twoside]{geometry}
+% set the paragraph indent to zero,
+% and the paragraph spacing to 0.5\baselineskip
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}%
+
+ %
+ % ─── USEFUL PACKAGES ────────────────────────────────────────────────────────────
+ %
+% Load colors with names
+\usepackage[usenames]{color}
+% For headers 
+\usepackage{fancyhdr}
+% Customize float and table captions (font size, etc.)
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{booktabs}
+%%% enumitem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{enumerate*}[label=\arabic*)]
+% \end{enumerate*}
+% \usepackage[]{enumitem}
+\usepackage[]{enumitem}
+% For inline lists in a paragraph:
+% \newlist{inlinelist}{enumerate*}{1}
+% \setlist*[inlinelist,1]{%
+%   label=(\roman*),
+% }
+% % Usage
+% \begin{inlinelist}
+%   \item item 1
+%   \item item 2
+%   \item item 3
+% \end{inlinelist}
+
+% When using babel or polyglossia with biblatex, loading csquotes is recommended to ensure that quoted texts are typeset according to the rules of your main language.
+\usepackage{csquotes}
+
+%
+% ─── BIBLATEX ───────────────────────────────────────────────────────────────────
+%
+% Uncomment the following lines, and add your references in a 'refs.bib' file beside the *.tex file
+% \usepackage[backend=biber,backref]{biblatex}
+% \addbibresource{refs.bib}
+
+%
+% ─── HYPERREF SETUP ─────────────────────────────────────────────────────────────
+%
+% For clickable URLS/references/etc. within the PDF document
+\usepackage[]{hyperref}
+%%% Hyperref setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fill and customize the following as required
+\hypersetup{
+pdfauthor = {},
+pdftitle = {},
+pdfsubject = {},
+% pdfkeywords = {Big Data, Fog Computing},
+pdfcreator = {XeLaTeX with hyperref package},
+pdfproducer = {pdfLaTeX},
+colorlinks = true,
+breaklinks = true,
+linkcolor = red,          % color of internal links
+citecolor = magenta,        % color of links to bibliography
+filecolor = magenta,      % color of file links
+urlcolor = blue,          % color of external links
+}
+
+% urls will have the same font and styling as the text (useful for urls in footnotes)
+
+%
+% ─── COMMANDS ───────────────────────────────────────────────────────────────────
+%
+
+\urlstyle{same}
+% This command will use lining numbers for citations
+\def\@cite#1#2{[\fslining{{#1\if@tempswa , #2\fi}]}}
+
+\newcommand{\etal}{\emph{et\,al.}\,}
+
+
+%
+% ───────────────────────────────────────────────────────────────
+%   :::::: T I T L E : :  :   :    :     :        :          :
+% ────────────────────────────────────────────────────────────
+%
+
+
+\title{}
+
+\author{
+    }
+\date{}
+
+
+%
+% ─────────────────────────────────────────────────────────────────────
+%   :::::: D O C U M E N T : :  :   :    :     :        :          :
+% ──────────────────────────────────────────────────────────────────
+%
+
+
+\begin{document}
+
+\maketitle
+
+% Uncomment at the end of your document to print the list of references
+% \printbibliography
+
+\end{document}
