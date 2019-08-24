@@ -65,13 +65,11 @@ Numbers={OldStyle, Proportional}
 % For inline lists in a paragraph:
 % \newlist{inlinelist}{enumerate*}{1}
 % \setlist*[inlinelist,1]{%
-%   label=(\roman*),
+%   label=(\roman*), % or alph or arabic
 % }
 % % Usage
 % \begin{inlinelist}
 %   \item item 1
-%   \item item 2
-%   \item item 3
 % \end{inlinelist}
 
 % When using babel or polyglossia with biblatex, loading csquotes is recommended to ensure that quoted texts are typeset according to the rules of your main language.
@@ -109,7 +107,9 @@ urlcolor = blue,          % color of external links
 % urls will have the same font and styling as the text (useful for urls in footnotes)
 
 %
-% ─── COMMANDS ───────────────────────────────────────────────────────────────────
+% ─────────────────────────────────────────────────────────────────────
+%   :::::: C O M M A N D S : :  :   :    :     :        :          :
+% ──────────────────────────────────────────────────────────────────
 %
 
 \urlstyle{same}
@@ -125,11 +125,8 @@ urlcolor = blue,          % color of external links
 % ────────────────────────────────────────────────────────────
 %
 
-
 \title{}
-
-\author{
-    }
+\author{}
 \date{}
 
 
@@ -138,7 +135,6 @@ urlcolor = blue,          % color of external links
 %   :::::: D O C U M E N T : :  :   :    :     :        :          :
 % ──────────────────────────────────────────────────────────────────
 %
-
 
 \begin{document}
 
